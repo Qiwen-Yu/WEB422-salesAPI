@@ -48,7 +48,7 @@ function loadSaleData() {
     .then((data) => {
       saleData = data;
      // let data = saleTableTemplate({ sales: saleData });
-      $("#sale-table tbody").html(saleTableTemplate({ sales: data}));
+      $("#sale-table tbody").html(saleTableTemplate({ sales: data }));
       $("#current-page").html(page);
     });
 };
