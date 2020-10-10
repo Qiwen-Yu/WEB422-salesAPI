@@ -43,13 +43,12 @@ let saleModalBodyTemplate = _.template(`
 
 
 function loadSaleData() {
-  fetch(`/api/sales?page=${page}&perPage=${perPage}`)
-    .then(response => response.json())
-    .then(json => {
-      saleData = json.message;
-      let data = saleTableTemplate({ sales: saleData });
-
-      $("#sale-table tbody").html(data);
+  fetch(`https://radiant-earth-97552.herokuapp.com/api/sales?page=${page}&perPage=${perPage}`)
+    .then((res) => res.json())
+    .then((data) => {
+      saleData = data;
+     // let data = saleTableTemplate({ sales: saleData });
+      $("#sale-table tbody").html(saleTableTemplate({ sales: data}));
       $("#current-page").html(page);
     });
 };
