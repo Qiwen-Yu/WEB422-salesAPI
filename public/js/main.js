@@ -2,7 +2,7 @@ let saleData = new Array();
 let page = 1;
 const perPage = 10;
 
-
+//Lodash template
 let saleTableTemplate = _.template(`
   <% _.forEach(sales, function(sale) { %>
     <tr data-id=<%- sale._id %>>
