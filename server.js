@@ -13,7 +13,7 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 const dataService = require("./modules/data-service.js");
 
-const myData = dataService("mongodb+srv://QIWEN-DBUser:yww1509089133621@cluster0.uf1i8.mongodb.net/QIWEN-DBUser?retryWrites=true&w=majority");
+const myData = dataService("mongodb+srv://QIWEN-DBUser:yww1509089133621@cluster0.uf1i8.mongodb.net/sample_supplies?retryWrites=true&w=majority");
 
 const app = express();
 
